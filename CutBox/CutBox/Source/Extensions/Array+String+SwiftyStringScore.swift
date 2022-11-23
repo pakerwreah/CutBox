@@ -14,7 +14,6 @@ extension Array where Element == [String: String] {
         return self
             .map { ($0, $0["string"]!.score(word: search)) }
             .filter { $0.1 > score }
-            .sorted { $0.1 > $1.1 }
             .map { $0.0 }
     }
 
