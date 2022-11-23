@@ -150,33 +150,8 @@ class HistoryService: NSObject {
             return cached
         }
 
-        let historyItems: [String] =
-            self.favoritesOnly ?
-                historyRepo.favorites
-                : historyRepo.items
-
-        let cache: [String]
-        if let search = self.filterText, !search.isEmpty {
-            switch searchMode {
-            case .fuzzyMatch:
-                cache = historyItems.fuzzySearchRankedFiltered(
-                    search: search,
-                    score: Constants.searchFuzzyMatchMinScore)
-            case .regexpAnyCase:
-                cache = historyItems.regexpSearchFiltered(
-                    search: search,
-                    options: [.caseInsensitive])
-            case .regexpStrictCase:
-                cache = historyItems.regexpSearchFiltered(
-                    search: search,
-                    options: [])
-            }
-        } else {
-            cache = historyItems
-        }
-
-        itemsCache = cache
-        return cache
+        itemsCache = dict.compactMap { $0["string"] }
+        return itemsCache!
     }
 
     private var dictCache: [[String: String]]?
