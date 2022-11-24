@@ -62,6 +62,8 @@ class SearchPreviewViewBase: NSView {
     let disposeBag = DisposeBag()
     let prefs = CutBoxPreferencesService.shared
 
+    private var widthConstraint: NSLayoutConstraint!
+
     override init(frame: NSRect) {
         super.init(frame: frame)
     }
@@ -83,8 +85,15 @@ class SearchPreviewViewBase: NSView {
         self.container.isHidden = bool
     }
 
+    private func resize() {
+        self.widthConstraint.constant = previewContainer.isHidden ? Dimensions.minWidth : Dimensions.maxWidth
+    }
+
     func hidePreview(_ bool: Bool) {
         self.previewContainer.isHidden = bool
+        resize()
+        self.window?.layoutIfNeeded()
+        self.window?.center()
     }
 
     func setupPlaceholder() {
@@ -103,6 +112,9 @@ class SearchPreviewViewBase: NSView {
         )
 
         setupPlaceholder()
+
+        self.widthConstraint = self.widthAnchor.constraint(equalToConstant: Dimensions.maxWidth)
+        self.widthConstraint.isActive = true
     }
 
     func colorizeMagnifier(image: NSImage = #imageLiteral(resourceName: "magnitude.png"),
@@ -145,5 +157,16 @@ class SearchPreviewViewBase: NSView {
 
         preview.selectedTextAttributes[.backgroundColor] = theme.preview.selectedTextBackgroundColor
         preview.selectedTextAttributes[.foregroundColor] = theme.preview.selectedTextColor
+
+        resize()
+        DispatchQueue.main.async {
+            self.window?.center()
+        }
     }
+}
+
+private enum Dimensions {
+
+    static var maxWidth: CGFloat { min(1000, NSScreen.main!.frame.size.width * 0.6) }
+    static var minWidth: CGFloat { max(600, maxWidth / 2) }
 }
