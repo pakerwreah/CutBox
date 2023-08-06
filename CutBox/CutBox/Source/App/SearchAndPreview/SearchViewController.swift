@@ -165,7 +165,11 @@ class SearchViewController: NSObject {
         self.searchView.itemsList.dataSource = self
         self.searchView.itemsList.delegate = self
 
-        self.searchView.filterTextPublisher
+        let filterText = self.searchView.filterTextPublisher
+            .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
+            .share(replay: 1)
+
+        filterText
             .map { $0.isEmpty }
             .subscribe(onNext: {
                 if self.prefs.useCompactUI {
@@ -176,7 +180,7 @@ class SearchViewController: NSObject {
             })
             .disposed(by: disposeBag)
 
-        self.searchView.filterTextPublisher
+        filterText
             .subscribe(onNext: {
                 self.historyService.filterText = $0
                 self.searchView.itemsList.reloadData()
