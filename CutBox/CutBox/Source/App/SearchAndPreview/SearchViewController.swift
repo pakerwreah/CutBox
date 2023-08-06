@@ -206,6 +206,10 @@ class SearchViewController: NSObject {
     /// Update the preview with selected clip(s)
     func updateSearchItemPreview() {
         let preview = prefs.prepareClips(selectedClips)
+        // 🔨 If the previous text was just an emoji,
+        // it messes up the word spacing when we set the next text.
+        // Assigning an empty text first seems to solve this issue.
+        self.searchView.preview.string = ""
         self.searchView.preview.string = preview.truncate(limit: 50_000)
     }
 
