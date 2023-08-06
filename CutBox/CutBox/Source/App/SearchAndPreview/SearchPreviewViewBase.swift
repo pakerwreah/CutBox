@@ -104,12 +104,6 @@ class SearchPreviewViewBase: NSView {
     }
 
     override func awakeFromNib() {
-        self.preview.textContainer!.widthTracksTextView = false
-
-        self.preview.textContainer!.containerSize = CGSize(
-            width: CGFloat.greatestFiniteMagnitude,
-            height: CGFloat.greatestFiniteMagnitude
-        )
 
         setupPlaceholder()
 
