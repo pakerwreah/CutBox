@@ -1,19 +1,19 @@
 PODS:
   - JSONSchema (0.6.0)
-  - KeyHolder (4.1.0):
-    - Magnet (~> 3.3.0)
-  - Magnet (3.3.0):
-    - Sauce (~> 2.2.0)
+  - KeyHolder (4.2.0):
+    - Magnet (~> 3.4.0)
+  - Magnet (3.4.0):
+    - Sauce (~> 2.4.0)
   - Nimble (10.0.0)
   - Quick (5.0.1)
-  - RxCocoa (6.5.0):
-    - RxRelay (= 6.5.0)
-    - RxSwift (= 6.5.0)
-  - RxRelay (6.5.0):
-    - RxSwift (= 6.5.0)
-  - RxSwift (6.5.0)
-  - Sauce (2.2.0)
-  - Sparkle (2.4.2)
+  - RxCocoa (6.9.0):
+    - RxRelay (= 6.9.0)
+    - RxSwift (= 6.9.0)
+  - RxRelay (6.9.0):
+    - RxSwift (= 6.9.0)
+  - RxSwift (6.9.0)
+  - Sauce (2.4.1)
+  - Sparkle (2.8.0)
   - SwiftyStringScore (0.2.2)
 
 DEPENDENCIES:
@@ -54,17 +54,17 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   JSONSchema: 2fcb0c33de01b60afa07701b395732d66dfbd936
-  KeyHolder: 7fce073043392cddc3e3126f3f9bdaa5ecf1f19e
-  Magnet: a44a5a14eecc77433cbaad1431b78f7d20725bf2
+  KeyHolder: b22f09b0c95fa4de579864108c6eb506beb09dd6
+  Magnet: d9212b3bb4fc0be22676279960185eeda6823b91
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   Quick: 749aa754fd1e7d984f2000fe051e18a3a9809179
-  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
-  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
-  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
-  Sauce: 3ade51738563f86b08888cf4b91ae5943012088b
-  Sparkle: 5ef7097e655c60f4aeb23fd1658fc3e8dd50f4ec
+  RxCocoa: ac16414696ae706516be3e1ab00fcce5bdc9be8a
+  RxRelay: 6b0c930e5cef57d5fe2032571e5e65b78e3cbdb1
+  RxSwift: 31649ace6aceeb422e16ff71c60804f9c3281ed9
+  Sauce: e4ffcf0332a298a0cb2f29b4200119bedbac23c5
+  Sparkle: 16aaef9876ab6b3d49633d26e8e5b77e0d52b0e2
   SwiftyStringScore: e9a3a4d84d313f68a90fe30f0520b00c7834167a
 
-PODFILE CHECKSUM: 9615dce552a9e80583a7c0f0c16d60d7600a5723
+PODFILE CHECKSUM: 4c6f6099e50afe977b74f6d6cdc00231d7cae96c
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.16.2

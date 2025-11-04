@@ -1075,6 +1075,7 @@
 				965348CE2843316B000FD0A1 /* Resources */,
 				1061C83466CB875B8C1221C5 /* [CP] Embed Pods Frameworks */,
 				64C7BD4EDAE24A6AF883EB2A /* [CP-User] Sign */,
+				FA555073149EC3F3D608840C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1105,6 +1106,7 @@
 				9689879620D2037300D40C02 /* Swiftlint */,
 				BF6D2BA12FA09425F0F3B6F6 /* [CP-User] Sign */,
 				9E83FAFE5121711CF945CA64 /* [CP] Embed Pods Frameworks */,
+				B1CCFDA8B7F68B26A825CB41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1398,6 +1400,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CutBoxAll-CutBox/Pods-CutBoxAll-CutBox-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B1CCFDA8B7F68B26A825CB41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CutBoxAll-CutBox/Pods-CutBoxAll-CutBox-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RxSwift/RxSwift_Privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa/RxCocoa_Privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RxRelay/RxRelay_Privacy.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RxSwift_Privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RxCocoa_Privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RxRelay_Privacy.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CutBoxAll-CutBox/Pods-CutBoxAll-CutBox-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BAE33ABDD43120A0B3851A37 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1422,7 +1446,6 @@
 		};
 		BF6D2BA12FA09425F0F3B6F6 /* [CP-User] Sign */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -1430,6 +1453,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = scripts/sign.sh;
+		};
+		FA555073149EC3F3D608840C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CutBoxAll-CutBoxUnitTests/Pods-CutBoxAll-CutBoxUnitTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RxSwift/RxSwift_Privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa/RxCocoa_Privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RxRelay/RxRelay_Privacy.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RxSwift_Privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RxCocoa_Privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RxRelay_Privacy.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CutBoxAll-CutBoxUnitTests/Pods-CutBoxAll-CutBoxUnitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
