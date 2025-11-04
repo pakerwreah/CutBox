@@ -200,7 +200,7 @@ class HistoryService: NSObject {
             return
         }
 
-        pollingTimer = Timer.scheduledTimer(timeInterval: 0.2,
+        pollingTimer = Timer.scheduledTimer(timeInterval: 1,
                                             target: self,
                                             selector: #selector(self.pollPasteboard),
                                             userInfo: nil,
