@@ -1,1 +1,0 @@
-../../../Target Support Files/SwiftyStringScore/SwiftyStringScore-umbrella.h

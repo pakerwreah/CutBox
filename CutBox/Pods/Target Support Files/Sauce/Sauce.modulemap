@@ -1,6 +1,0 @@
-module Sauce {
-  umbrella header "Sauce-umbrella.h"
-
-  export *
-  module * { export * }
-}

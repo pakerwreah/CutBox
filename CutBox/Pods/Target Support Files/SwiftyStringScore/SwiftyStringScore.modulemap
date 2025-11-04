@@ -1,6 +1,0 @@
-module SwiftyStringScore {
-  umbrella header "SwiftyStringScore-umbrella.h"
-
-  export *
-  module * { export * }
-}
